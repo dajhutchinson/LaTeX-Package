@@ -2,8 +2,9 @@
 Personal LaTeX stylesheet which I am using to make my academic notes.
 
 ## usepackage
-The package name is called *DomH*.
+The package name is called `DomH` and requires `amsmath` & `fancyhdr`.
 ```
+\usepackage{amsmath,fancyhdr}
 \usepackage[section]{DomH}
 \headertitle{My Notes}
 ```
