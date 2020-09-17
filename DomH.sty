@@ -1,0 +1,116 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{DomH}[2020/09/17 Dom Hutchinson]
+
+\RequirePackage{amsmath,fancyhdr}
+
+\pagestyle{fancy}
+\setlength\parindent{0pt}
+\allowdisplaybreaks
+
+%% 'section' option
+%  counters reset each section
+\DeclareOption{section}{
+  \newcommand{\front}{\arabic{section}}
+  \newcounter{definition}[section]
+  \newcounter{example}[section]
+  \newcounter{notation}[section]
+  \newcounter{proof}[section]
+  \newcounter{proposition}[section]
+  \newcounter{remark}[section]
+  \newcounter{theorem}[section]
+}
+%% 'subsection' option
+%  counters reset each subsection
+\DeclareOption{subsection}{
+  \newcommand{\front}{\arabic{subsection}}
+  \newcounter{definition}[subsection]
+  \newcounter{example}[subsection]
+  \newcounter{notation}[subsection]
+  \newcounter{proof}[subsection]
+  \newcounter{proposition}[subsection]
+  \newcounter{remark}[subsection]
+  \newcounter{theorem}[subsection]
+}
+
+\ProcessOptions\relax
+
+%header
+\newcommand*{\headertitle}[1]{\gdef\@headertitle{#1}} % read in header title
+\newcommand*{\@headertitle}{Notes}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{Dom Hutchinson}
+\fancyhead[C]{\@headertitle}
+\fancyhead[R]{\today}
+
+% ENVIRONMENTS
+\newenvironment{definition}[1]
+  { % before body
+  \stepcounter{definition}
+  \textbf{Definition \front.\arabic{definition}\ - }\textit{#1}
+
+  }
+  { % after body
+  \\
+  }
+
+\newenvironment{example}[1]
+  { % before body
+  \stepcounter{example}
+  \textbf{Example \front.\arabic{example}\ - }\textit{#1}
+
+  }
+  { % after body
+  \\
+  }
+
+\newenvironment{notation}[1]
+  { % before body
+  \stepcounter{notation}
+  \textbf{Notation \front.\arabic{notation}\ - }\textit{#1}
+
+  }
+  { % after body
+  \\
+  }
+
+\newenvironment{proof}[1]
+  { % before body
+  \stepcounter{proof}
+  \textbf{Proof \front.\arabic{proof}\ - }\textit{#1}
+
+  }
+  { % after body
+  \\
+  }
+
+\newenvironment{proposition}[1]
+  { % before body
+  \stepcounter{proposition}
+  \textbf{Proposition \front.\arabic{proposition}\ - }\textit{#1}
+
+  }
+  { % after body
+  \\
+  }
+
+\newenvironment{remark}[1]
+  { % before body
+  \stepcounter{remark}
+  \textbf{Remark \front.\arabic{remark}\ - }\textit{#1}
+
+  }
+  { % after body
+  \\
+  }
+
+\newenvironment{theorem}[1]
+  { % before body
+  \stepcounter{theorem}
+  \textbf{Theorem \front.\arabic{theorem}\ - }\textit{#1}
+
+  }
+  { % after body
+  \\
+  }
+
+\endinput
