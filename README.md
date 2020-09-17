@@ -1,6 +1,10 @@
 # LaTeX-Package
 Personal LaTeX stylesheet which I am using to make my academic notes.
 
+## Install
+If you are using MiKTex navigate to `C:\Program Files\MiKTeX 2.9\tex\latex`; create a folder called `domh` and copy `*.sty` files into that folder.\
+Now the package can be used anywhere on your computer.
+
 ## usepackage
 The package name is called `DomH` and requires `amsmath` & `fancyhdr`.
 ```
