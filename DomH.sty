@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{DomH}[2020/09/17 Dom Hutchinson]
 
-\RequirePackage{amsmath,fancyhdr}
+\RequirePackage{amsmath,environ,fancyhdr}
 
 \pagestyle{fancy}
 \setlength\parindent{0pt}
@@ -34,6 +34,15 @@
 
 \ProcessOptions\relax
 
+% if statements
+\newif\ifdefinitions \definitionstrue
+\newif\ifexamples \examplestrue
+\newif\ifnotations \notationstrue
+\newif\ifproofs \proofstrue
+\newif\ifpropositions \propositionstrue
+\newif\ifremarks \remarkstrue
+\newif\iftheorems \theoremstrue
+
 %header
 \newcommand*{\headertitle}[1]{\gdef\@headertitle{#1}} % read in header title
 \newcommand*{\@headertitle}{Notes}
@@ -43,74 +52,74 @@
 \fancyhead[R]{\today}
 
 % ENVIRONMENTS
-\newenvironment{definition}[1]
-  { % before body
+\NewEnviron{definition}[1]{ % before body
+  \ifdefinitions
   \stepcounter{definition}
   \textbf{Definition \front.\arabic{definition}\ - }\textit{#1}
 
-  }
-  { % after body
+  \BODY
   \\
+  \fi
   }
 
-\newenvironment{example}[1]
-  { % before body
+\NewEnviron{example}[1]{ % before body
+  \ifexamples
   \stepcounter{example}
   \textbf{Example \front.\arabic{example}\ - }\textit{#1}
 
-  }
-  { % after body
+  \BODY
   \\
+  \fi
   }
 
-\newenvironment{notation}[1]
-  { % before body
+\NewEnviron{notation}[1]{ % before body
+  \ifnotations
   \stepcounter{notation}
   \textbf{Notation \front.\arabic{notation}\ - }\textit{#1}
 
-  }
-  { % after body
+  \BODY
   \\
+  \fi
   }
 
-\newenvironment{proof}[1]
-  { % before body
+\NewEnviron{proof}[1]{ % before body
+  \ifproofs
   \stepcounter{proof}
   \textbf{Proof \front.\arabic{proof}\ - }\textit{#1}
 
-  }
-  { % after body
+  \BODY
   \\
+  \fi
   }
 
-\newenvironment{proposition}[1]
-  { % before body
+\NewEnviron{proposition}[1]{ % before body
+  \ifpropositions
   \stepcounter{proposition}
   \textbf{Proposition \front.\arabic{proposition}\ - }\textit{#1}
 
-  }
-  { % after body
+  \BODY
   \\
+  \fi
   }
 
-\newenvironment{remark}[1]
-  { % before body
+\NewEnviron{remark}[1]{ % before body
+  \ifremarks
   \stepcounter{remark}
   \textbf{Remark \front.\arabic{remark}\ - }\textit{#1}
 
-  }
-  { % after body
+  \BODY
   \\
+  \fi
   }
 
-\newenvironment{theorem}[1]
-  { % before body
+\NewEnviron{theorem}[1]{ % before body
+  \iftheorems
   \stepcounter{theorem}
   \textbf{Theorem \front.\arabic{theorem}\ - }\textit{#1}
 
-  }
-  { % after body
+  \BODY
   \\
+  \fi
   }
 
 \endinput

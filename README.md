@@ -8,7 +8,7 @@ Now the package can be used anywhere on your computer.
 ## usepackage
 The package name is called `DomH` and requires `amsmath` & `fancyhdr`.
 ```
-\usepackage{amsmath,fancyhdr}
+\usepackage{amsmath,environ,fancyhdr}
 \usepackage[section]{DomH}
 \headertitle{My Notes}
 ```
@@ -29,3 +29,7 @@ Several environments are defined. Each is identical in structure but have differ
 - `proposition`
 - `remark`
 - `theorem`
+
+### Toggling Environments
+All environments have their own associated boolean which toggles whether they appear in the final document or not.\
+Use `\<environ>sfalse` to hide occurrences of an environment, and `\<environ>strue` to show occurrences. (*e.g.* `\definitionsfalse`)
