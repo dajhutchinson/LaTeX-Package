@@ -37,6 +37,7 @@ I have defined some commands which act as shortcodes
 | `\nats` | <img src="https://latex.codecogs.com/gif.latex?\mathbb{N}" />  | `\mathbb{N}` |
 | `\I` | <img src="https://latex.codecogs.com/gif.latex?\mathcal{I}" />  | `\mathcal{I}` |
 | `\X` | <img src="https://latex.codecogs.com/gif.latex?\pmb{X}" />  | `\pmb{X}` |
+| `\proved` | <img src="https://latex.codecogs.com/gif.latex?\square" />  | `$\hfill\square$` |
 
 
 ## Environments
