@@ -29,11 +29,15 @@ I have defined some commands which act as shortcodes
 | `\expect` | <img src="https://latex.codecogs.com/gif.latex?\mathbb{E}" />  | `\mathbb{E}` |
 | `\var` | <img src="https://latex.codecogs.com/gif.latex?\text{Var}" />  | `\text{Var}` |
 | `\cov` | <img src="https://latex.codecogs.com/gif.latex?\text{Cov}" />  | `\text{Cov}` |
+| `\corr` | <img src="https://latex.codecogs.com/gif.latex?\text{Corr}" /> | `\text{Corr}` |
 | `\M` | <img src="https://latex.codecogs.com/gif.latex?\mathcal{M}" />  | `\mathcal{M}` |
 | `\F` | <img src="https://latex.codecogs.com/gif.latex?\mathcal{F}" />  | `\mathcal{F}` |
 | `\iid` | <img src="https://latex.codecogs.com/gif.latex?\overset{\text{iid}}{\sim}" />  | `\overset{\text{iid}}{\sim}` |
 | `\reals` | <img src="https://latex.codecogs.com/gif.latex?\mathbb{R}" />  | `\mathbb{R}` |
 | `\nats` | <img src="https://latex.codecogs.com/gif.latex?\mathbb{N}" />  | `\mathbb{N}` |
+| `\I` | <img src="https://latex.codecogs.com/gif.latex?\mathcal{I}" />  | `\mathcal{I}` |
+| `\X` | <img src="https://latex.codecogs.com/gif.latex?\pmb{X}" />  | `\pmb{X}` |
+
 
 ## Environments
 Several environments are defined. Each is identical in structure but have different counters are text.\
