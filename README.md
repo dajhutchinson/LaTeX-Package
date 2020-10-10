@@ -6,9 +6,9 @@ If you are using MiKTex navigate to `C:\Program Files\MiKTeX 2.9\tex\latex`; cre
 Now the package can be used anywhere on your computer.
 
 ## usepackage
-The package name is called `DomH` and requires `amsmath` & `fancyhdr`.
+The package name is called `DomH` and requires `amsmath`,`environ`,`bbm` & `fancyhdr`.
 ```
-\usepackage{amsmath,environ,fancyhdr}
+\usepackage{amsmath,environ,fancyhdr,bbm}
 \usepackage[section]{DomH}
 \headertitle{My Notes}
 ```
@@ -35,9 +35,11 @@ I have defined some commands which act as shortcodes
 | `\iid` | <img src="https://latex.codecogs.com/gif.latex?\overset{\text{iid}}{\sim}" />  | `\overset{\text{iid}}{\sim}` |
 | `\reals` | <img src="https://latex.codecogs.com/gif.latex?\mathbb{R}" />  | `\mathbb{R}` |
 | `\nats` | <img src="https://latex.codecogs.com/gif.latex?\mathbb{N}" />  | `\mathbb{N}` |
+| `\ints` | <img src="https://latex.codecogs.com/gif.latex?\mathbb{Z}" />  | `\mathbb{Z}` |
 | `\I` | <img src="https://latex.codecogs.com/gif.latex?\mathcal{I}" />  | `\mathcal{I}` |
 | `\X` | <img src="https://latex.codecogs.com/gif.latex?\pmb{X}" />  | `\pmb{X}` |
 | `\proved` | <img src="https://latex.codecogs.com/gif.latex?\square" />  | `$\hfill\square$` |
+| `\indexed` | <img src="https://latex.codecogs.com/gif.latex?\mathbbm{1}" />  | `$\mathbbm{1}$` |
 
 
 ## Environments

@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{DomH}[2020/09/17 Dom Hutchinson]
 
-\RequirePackage{amsmath,environ,fancyhdr}
+\RequirePackage{amsmath,environ,fancyhdr,bbm}
 
 \pagestyle{fancy}
 \setlength\parindent{0pt}
@@ -31,6 +31,15 @@
   \newcounter{remark}[subsection]
   \newcounter{theorem}[subsection]
 }
+
+\DeclareOption{nohyphen}{
+  \tolerance=1
+  \emergencystretch=\maxdimen
+  \hyphenpenalty=10000
+  \hbadness=10000
+}
+
+\renewcommand{\theenumi}{\roman{enumi})} % enumerate in roman
 
 \ProcessOptions\relax
 
@@ -64,6 +73,8 @@
 \newcommand*{\iid}{\overset{\text{iid}}{\sim}}
 \newcommand*{\reals}{\mathbb{R}}
 \newcommand*{\nats}{\mathbb{N}}
+\newcommand*{\ints}{\mathbb{Z}}
+\newcommand*{\indexed}{\mathbbm{1}}
 \newcommand*{\proved}{$\hfill\square$}
 
 % ENVIRONMENTS
@@ -90,7 +101,7 @@
 \NewEnviron{notation}[1]{ % before body
   \ifnotations
   \stepcounter{notation}
-  \textbf{Notation \front.\arabic{notation}\ - }\textit{#1}
+  \noindent\textbf{Notation \front.\arabic{notation}\ - }\textit{#1}
 
   \BODY
   \\
