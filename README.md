@@ -40,7 +40,8 @@ I have defined some commands which act as shortcodes
 | `\X` | <img src="https://latex.codecogs.com/gif.latex?\pmb{X}" />  | `\pmb{X}` |
 | `\proved` | <img src="https://latex.codecogs.com/gif.latex?\square" />  | `$\hfill\square$` |
 | `\indexed` | <img src="https://latex.codecogs.com/gif.latex?\mathbbm{1}" />  | `$\mathbbm{1}$` |
-
+| `\argmin` | <img src="https://latex.codecogs.com/gif.latex?\text{argmin}" />  | `$\text{argmin}$` |
+| `\argmax` | <img src="https://latex.codecogs.com/gif.latex?\text{argmax}" />  | `$\text{argmax}$` |
 
 ## Environments
 Several environments are defined. Each is identical in structure but have different counters are text.\
@@ -50,6 +51,8 @@ Several environments are defined. Each is identical in structure but have differ
 - `proposition`
 - `remark`
 - `theorem`
+- `question` Takes the question name as a parameter `\begin{question}{6b)}\end{question}`.
+- `answer` Takes the question name as a parameter `\begin{answer}{6b)}\end{answer}`.
 
 ### Toggling Environments
 All environments have their own associated boolean which toggles whether they appear in the final document or not.\

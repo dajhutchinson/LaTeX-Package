@@ -51,6 +51,8 @@
 \newif\ifpropositions \propositionstrue
 \newif\ifremarks \remarkstrue
 \newif\iftheorems \theoremstrue
+\newif\ifquestions \questionstrue
+\newif\ifanswers \answerstrue
 
 %header
 \newcommand*{\headertitle}[1]{\gdef\@headertitle{#1}} % read in header title
@@ -76,6 +78,8 @@
 \newcommand*{\ints}{\mathbb{Z}}
 \newcommand*{\indexed}{\mathbbm{1}}
 \newcommand*{\proved}{$\hfill\square$}
+\newcommand*{\argmin}{\text{argmin}}
+\newcommand*{\argmax}{\text{argmax}}
 
 % ENVIRONMENTS
 \NewEnviron{definition}[1]{ % before body
@@ -144,6 +148,30 @@
   \textbf{Theorem \front.\arabic{theorem}\ - }\textit{#1}
 
   \BODY
+  \\
+  \fi
+  }
+
+% PROBLEM SHEETS#
+
+\NewEnviron{question}[1]{ % before body
+  \ifquestions
+  \stepcounter{theorem}
+  \textbf{Question #1}\\
+  { \everymath={\displaystyle}
+  \BODY
+  }
+  \\
+  \fi
+  }
+
+\NewEnviron{answer}[1]{ % before body
+  \ifanswers
+  \stepcounter{theorem}
+  \textbf{Answer #1}\\
+  { \everymath={\displaystyle}
+  \BODY
+  }
   \\
   \fi
   }
