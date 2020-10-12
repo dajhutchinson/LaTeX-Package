@@ -57,3 +57,28 @@ Several environments are defined. Each is identical in structure but have differ
 ### Toggling Environments
 All environments have their own associated boolean which toggles whether they appear in the final document or not.\
 Use `\<environ>sfalse` to hide occurrences of an environment, and `\<environ>strue` to show occurrences. (*e.g.* `\definitionsfalse`)
+
+
+## Snippets
+Here is some code for the `snippets.cson` to make creating my custom environments much quicker.
+```
+'.text.tex.latex':
+  'definition':
+    'prefix': 'definition'
+    'body':'\\\\begin{definition}{$1}\n\t$2\n\\\\end{definition}'
+  'proposition':
+    'prefix': 'proposition'
+    'body':'\\\\begin{proposition}{$1}\n\t$2\n\\\\end{proposition}'
+  'remark':
+    'prefix': 'remark'
+    'body':'\\\\begin{remark}{$1}\n\t$2\n\\\\end{remark}'
+  'example':
+    'prefix': 'example'
+    'body':'\\\\begin{example}{$1}\n\t$2\n\\\\end{example}'
+  'answer':
+    'prefix': 'answer'
+    'body':'\\\\begin{answer}{$1}\n\t$2\n\\\\end{answer}'
+  'question':
+    'prefix': 'question'
+    'body':'\\\\begin{question}{$1}\n\t$2\n\\\\end{question}'
+```
