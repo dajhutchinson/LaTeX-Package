@@ -72,13 +72,26 @@ Here is some code for the `snippets.cson` to make creating my custom environment
   'remark':
     'prefix': 'remark'
     'body':'\\\\begin{remark}{$1}\n\t$2\n\\\\end{remark}'
+  'theorem':
+    'prefix': 'theorem'
+    'body':'\\\\begin{theorem}{$1}\n\t$2\n\\\\end{theorem}'
   'example':
     'prefix': 'example'
     'body':'\\\\begin{example}{$1}\n\t$2\n\\\\end{example}'
+  'proof':
+    'prefix': 'proof'
+    'body':'\\\\begin{proof}{$1}\n\t$2\n\\\\end{proof}'
   'answer':
     'prefix': 'answer'
     'body':'\\\\begin{answer}{$1}\n\t$2\n\\\\end{answer}'
   'question':
     'prefix': 'question'
     'body':'\\\\begin{question}{$1}\n\t$2\n\\\\end{question}'
+  'partialderivative':
+    'prefix': 'partialderivative'
+    'body':'\\\\frac{\\\\partial $1}{\\\\partial $2}$3'
+  'texttt':
+    'prefix': 'tt'
+    'body':'\\\\texttt{$1} $2'
 ```
+To use these snippets type the *environment name* then press *tab* (e.g. `definition` + `tab`). This will generate the environment code and place the cursor in the *name* location.
