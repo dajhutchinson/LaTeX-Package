@@ -43,6 +43,8 @@ I have defined some commands which act as shortcodes
 | `\argmin` | <img src="https://latex.codecogs.com/gif.latex?\text{argmin}" />  | `$\text{argmin}$` |
 | `\argmax` | <img src="https://latex.codecogs.com/gif.latex?\text{argmax}" />  | `$\text{argmax}$` |
 
+`reference` prepares a reference section (on a new page) and sets the page numbering to roman numerals.
+
 ## Environments
 Several environments are defined. Each is identical in structure but have different counters are text.\
 - `definition`
@@ -93,5 +95,11 @@ Here is some code for the `snippets.cson` to make creating my custom environment
   'texttt':
     'prefix': 'tt'
     'body':'\\\\texttt{$1} $2'
+  'qanda':
+    'prefix': 'qanda'
+    'body':'\\\\begin{question}{$1}\n\t${2:TODO}\n\\\\end{question}\n\n\\\\begin{answer}{$1}\n\t${3:TODO}\n\\\\end{answer}$4'
+  'array':
+    'prefix': 'array'
+    'body':'\\\\[\\\\begin{array}{${1:rcl}}\n\t$2\n\\\\end{array}\\\\]$3'
 ```
 To use these snippets type the *environment name* then press *tab* (e.g. `definition` + `tab`). This will generate the environment code and place the cursor in the *name* location.

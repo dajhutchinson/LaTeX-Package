@@ -7,6 +7,12 @@
 \setlength\parindent{0pt}
 \allowdisplaybreaks
 
+% space between paragraphs
+\setlength{\parskip}{.3\baselineskip}
+
+% Footnote numbering style
+\renewcommand{\thefootnote}{[\arabic{footnote}]}
+
 %% 'section' option
 %  counters reset each section
 \DeclareOption{section}{
@@ -63,6 +69,7 @@
 \fancyhead[R]{\today}
 
 % SHORTCODES
+\newcommand*{\indep}{\perp \!\!\! \perp}
 \newcommand*{\prob}{\mathbb{P}}
 \newcommand*{\expect}{\mathbb{E}}
 \newcommand*{\var}{\text{Var}}
@@ -73,6 +80,7 @@
 \newcommand*{\I}{\mathcal{I}}
 \newcommand*{\x}{\mathbf{x}}
 \newcommand*{\X}{\mathbf{X}}
+\newcommand*{\R}{\mathcal{R}}
 \newcommand*{\iid}{\overset{\text{iid}}{\sim}}
 \newcommand*{\reals}{\mathbb{R}}
 \newcommand*{\nats}{\mathbb{N}}
@@ -82,13 +90,15 @@
 \newcommand*{\argmin}{\text{argmin}}
 \newcommand*{\argmax}{\text{argmax}}
 
+\newcommand*{\reference}{\setcounter{section}{-1}\pagenumbering{Roman}\newpage\section{Reference} \label{sec_Reference}}
+
 % ENVIRONMENTS
 \NewEnviron{definition}[1]{ % before body
   \ifdefinitions
   \stepcounter{definition}
   \textbf{Definition \front.\arabic{definition}\ - }\textit{#1}
 
-  \BODY
+  \vspace{-\parskip}\BODY
   \\
   \fi
   }
@@ -98,7 +108,7 @@
   \stepcounter{example}
   \textbf{Example \front.\arabic{example}\ - }\textit{#1}
 
-  \BODY
+  \vspace{-\parskip}\BODY
   \\
   \fi
   }
@@ -108,7 +118,7 @@
   \stepcounter{notation}
   \noindent\textbf{Notation \front.\arabic{notation}\ - }\textit{#1}
 
-  \BODY
+  \vspace{-\parskip}\BODY
   \\
   \fi
   }
@@ -118,7 +128,7 @@
   \stepcounter{proof}
   \textbf{Proof \front.\arabic{proof}\ - }\textit{#1}
 
-  \BODY
+  \vspace{-\parskip}\BODY
   \\
   \fi
   }
@@ -128,7 +138,7 @@
   \stepcounter{proposition}
   \textbf{Proposition \front.\arabic{proposition}\ - }\textit{#1}
 
-  \BODY
+  \vspace{-\parskip}\BODY
   \\
   \fi
   }
@@ -138,7 +148,7 @@
   \stepcounter{remark}
   \textbf{Remark \front.\arabic{remark}\ - }\textit{#1}
 
-  \BODY
+  \vspace{-\parskip}\BODY
   \\
   \fi
   }
@@ -148,7 +158,7 @@
   \stepcounter{theorem}
   \textbf{Theorem \front.\arabic{theorem}\ - }\textit{#1}
 
-  \BODY
+  \vspace{-\parskip}\BODY
   \\
   \fi
   }
@@ -160,7 +170,7 @@
   \stepcounter{theorem}
   \textbf{Question #1}\\
   { \everymath={\displaystyle}
-  \BODY
+    \vspace{-\parskip}\BODY
   }
   \\
   \fi
@@ -171,7 +181,7 @@
   \stepcounter{theorem}
   \textbf{Answer #1}\\
   { \everymath={\displaystyle}
-  \BODY
+    \vspace{-\parskip}\BODY
   }
   \\
   \fi
