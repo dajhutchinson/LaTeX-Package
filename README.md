@@ -26,6 +26,7 @@ I have defined some commands which act as shortcodes
 | Command | Result | Shortcode for |
 |---------|--------|---------------|
 | `\prob` | <img src="https://latex.codecogs.com/gif.latex?\mathbb{P}" />  | `\mathbb{P}` |
+| `\Q` | <img src="https://latex.codecogs.com/gif.latex?\mathbb{Q}" />  | `\mathbb{Q}` |
 | `\expect` | <img src="https://latex.codecogs.com/gif.latex?\mathbb{E}" />  | `\mathbb{E}` |
 | `\var` | <img src="https://latex.codecogs.com/gif.latex?\text{Var}" />  | `\text{Var}` |
 | `\cov` | <img src="https://latex.codecogs.com/gif.latex?\text{Cov}" />  | `\text{Cov}` |
