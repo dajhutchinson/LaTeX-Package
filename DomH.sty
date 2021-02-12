@@ -96,7 +96,7 @@
 % ENVIRONMENTS
 \NewEnviron{definition}[1]{ % before body
   \ifdefinitions
-  \stepcounter{definition}
+  \refstepcounter{definition}
   \textbf{Definition \front.\arabic{definition}\ - }\textit{#1}
 
   \vspace{-\parskip}\BODY
@@ -106,7 +106,7 @@
 
 \NewEnviron{example}[1]{ % before body
   \ifexamples
-  \stepcounter{example}
+  \refstepcounter{example}
   \textbf{Example \front.\arabic{example}\ - }\textit{#1}
 
   \vspace{-\parskip}\BODY
@@ -116,7 +116,7 @@
 
 \NewEnviron{notation}[1]{ % before body
   \ifnotations
-  \stepcounter{notation}
+  \refstepcounter{notation}
   \noindent\textbf{Notation \front.\arabic{notation}\ - }\textit{#1}
 
   \vspace{-\parskip}\BODY
@@ -126,7 +126,7 @@
 
 \NewEnviron{proof}[1]{ % before body
   \ifproofs
-  \stepcounter{proof}
+  \refstepcounter{proof}
   \textbf{Proof \front.\arabic{proof}\ - }\textit{#1}
 
   \vspace{-\parskip}\BODY
@@ -136,7 +136,7 @@
 
 \NewEnviron{proposition}[1]{ % before body
   \ifpropositions
-  \stepcounter{proposition}
+  \refstepcounter{proposition}
   \textbf{Proposition \front.\arabic{proposition}\ - }\textit{#1}
 
   \vspace{-\parskip}\BODY
@@ -146,7 +146,7 @@
 
 \NewEnviron{remark}[1]{ % before body
   \ifremarks
-  \stepcounter{remark}
+  \refstepcounter{remark}
   \textbf{Remark \front.\arabic{remark}\ - }\textit{#1}
 
   \vspace{-\parskip}\BODY
@@ -156,7 +156,7 @@
 
 \NewEnviron{theorem}[1]{ % before body
   \iftheorems
-  \stepcounter{theorem}
+  \refstepcounter{theorem}
   \textbf{Theorem \front.\arabic{theorem}\ - }\textit{#1}
 
   \vspace{-\parskip}\BODY
@@ -168,7 +168,7 @@
 
 \NewEnviron{question}[1]{ % before body
   \ifquestions
-  \stepcounter{theorem}
+  \refstepcounter{theorem}
   \textbf{Question #1}\\
   { \everymath={\displaystyle}
     \vspace{-\parskip}\BODY
@@ -179,7 +179,7 @@
 
 \NewEnviron{answer}[1]{ % before body
   \ifanswers
-  \stepcounter{theorem}
+  \refstepcounter{theorem}
   \textbf{Answer #1}\\
   { \everymath={\displaystyle}
     \vspace{-\parskip}\BODY

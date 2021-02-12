@@ -61,6 +61,9 @@ Several environments are defined. Each is identical in structure but have differ
 All environments have their own associated boolean which toggles whether they appear in the final document or not.\
 Use `\<environ>sfalse` to hide occurrences of an environment, and `\<environ>strue` to show occurrences. (*e.g.* `\definitionsfalse`)
 
+### Labelling & Referencing
+All environments can be labelled using `\label{__env_name__}` and then the number of that environment can be retrieved using `\ref{__env_name__}`.\
+For a full reference (e.g. *Definition 1.7*) you need to state the environment type yourself (e.g. *Definition*) and retrieve the section number separately (e.g. `\ref{__sec_name__}`). So a full reference will look like `Definition \ref{__sec_name__}.\ref{__env_name__}`.
 
 ## Snippets
 Here is some code for the `snippets.cson` to make creating my custom environments much quicker.
